@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -34,5 +34,142 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+*/
+@font-face { 
+  font-family: Marzaki;
+  src: url('https://fonts.googleapis.com/css?family=Markazi Text')
+}
+
+@font-face { 
+  font-family: Karla;
+  src: url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap')
+}
+
+.Header {
+  display: grid;
+  grid-template-rows: 0px;
+}
+
+.Nav{
+  background-color: rgb(179, 179, 177);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 0.2fr repeat(7, 1fr) 0.2fr;
+  grid-template-rows: auto;
+  position: sticky;
+  top: 0;
+}
+
+.Nav-menu {
+  list-style-type: none;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column: 2/ span 7;
+  grid-template-rows: repeat(auto,100px);
+  grid-row: auto;
+
+}
+
+.Nav-logo {
+  max-width: 200px;
+  display: inline-block;
+}
+
+.Nav-link {
+  text-decoration: none;
+  font-family: Karla;
+  color: rgb(52, 62, 52);
+}
+
+.Main {
+  display: grid;
+  background-color: rgb(242, 242, 242);
+  place-items: center;
+  text-align: center;
+  grid-template-rows: 100vh;
+}
+
+.Footer{
+  background-color: rgb(130, 131, 128);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+  grid-template-rows: auto;
+}
+
+.Footer-menu{
+  list-style-type: none;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2/ span 4;
+}
+
+.Footer-logo {
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.Footer-link {
+  text-decoration: none;
+  font-family: Karla;
+  color: rgb(52, 62, 52);
+}
+
+/*For smaller screens*/
+@media (max-width: 800px) {
+  .Nav{
+    background-color: rgb(179, 179, 177);
+    position: sticky;
+    top: 0;
+    
+  }
+  
+  .Nav-menu {
+    list-style-type: none;
+    display: inline-block;
+    place-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .Nav-logo {
+    max-width: 200px;
+    display: inline-block;
+  }
+  
+  .Nav-link {
+    text-decoration: none;
+    font-family: Karla;
+    color: rgb(52, 62, 52);
+    max-height: 0;
+    transition: max-height .5s ease-out;
+  }
+
+  .Footer{
+    background-color: rgb(130, 131, 128);
+  }
+  
+  .Footer-menu{
+    list-style-type: none;
+    display: inline-block;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .Footer-logo {
+    max-width: 100px;
+    display: inline-block;
+  }
+  
+  .Footer-link {
+    text-decoration: none;
+    font-family: Karla;
+    color: rgb(52, 62, 52);
   }
 }

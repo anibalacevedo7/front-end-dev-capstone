@@ -1,26 +1,28 @@
 import navlogo from './images/nav-logo.png'
 function Nav() {
     return(
-        <nav>
-            <img src={navlogo} alt="Navigation logo"></img>
-            <ul>
+        <nav className='Nav'>
+            <ul className='Nav-menu'>
                 <li>
-                    <a href="Route">Home</a>
+                    <img src={navlogo} alt="Navigation logo" className='Nav-logo'></img>
                 </li>
                 <li>
-                    <a href="Route">About</a>
+                    <a href="Route" className='Nav-link'>Home</a>
                 </li>
                 <li>
-                    <a href="Route">Menu</a>
+                    <a href="Route" className='Nav-link'>About</a>
                 </li>
                 <li>
-                    <a href="Route">Reservations</a>
+                    <a href="Route" className='Nav-link'>Menu</a>
                 </li>
                 <li>
-                    <a href="Route">Order Online</a>
+                    <a href="Route" className='Nav-link'>Reservations</a>
                 </li>
                 <li>
-                    <a href="Route">Log In</a>
+                    <a href="Route" className='Nav-link'>Order Online</a>
+                </li>
+                <li>
+                    <a href="Route" className='Nav-link'>Log In</a>
                 </li>
             </ul>
         </nav>

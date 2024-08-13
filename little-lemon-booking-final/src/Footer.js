@@ -2,17 +2,19 @@ import footerlogo from './images/footer-logo.png'
 
 function Footer(){
     return(
-        <footer>
-            <img src={footerlogo} alt="Footer Logo"></img>
-            <ul>
+        <footer className='Footer'>
+            <ul className='Footer-menu'>
                 <li>
-                    <a href="Placeholder">Contact us</a>
+                    <img src={footerlogo} alt="Footer Logo" className='Footer-logo'></img>
                 </li>
                 <li>
-                    <a href="Placeholder">Contact us</a>
+                    <a href="Placeholder" className='Footer-link'>Contact us</a>
                 </li>
                 <li>
-                    <a href="Placeholder">Contact us</a>
+                    <a href="Placeholder" className='Footer-link'>Contact us</a>
+                </li>
+                <li>
+                    <a href="Placeholder" className='Footer-link'>Contact us</a>
                 </li>
             </ul>
         </footer>
