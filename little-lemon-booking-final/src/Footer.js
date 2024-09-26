@@ -11,10 +11,10 @@ function Footer(){
                     <a href="Placeholder" className='Footer-link'>Contact us</a>
                 </li>
                 <li>
-                    <a href="Placeholder" className='Footer-link'>Contact us</a>
+                    <a href="Placeholder" className='Footer-link'>Facebook</a>
                 </li>
                 <li>
-                    <a href="Placeholder" className='Footer-link'>Contact us</a>
+                    <a href="Placeholder" className='Footer-link'>Instagram</a>
                 </li>
             </ul>
         </footer>

@@ -1,4 +1,6 @@
 import navlogo from './images/nav-logo.png'
+import {Link} from 'react-scroll';
+
 function Nav() {
     return(
         <nav className='Nav'>
@@ -7,16 +9,16 @@ function Nav() {
                     <img src={navlogo} alt="Navigation logo" className='Nav-logo'></img>
                 </li>
                 <li>
-                    <a href="Route" className='Nav-link'>Home</a>
+                    <Link to="call-to-action-section" smooth={true} duration={400} spy={true} offset={-100} className='Nav-link' activeClass="Active-link">Home</Link>
                 </li>
                 <li>
-                    <a href="Route" className='Nav-link'>About</a>
+                    <Link to="none" smooth={true} duration={400} spy={true} offset={-100} className='Nav-link' activeClass="Active-link">About</Link>
                 </li>
                 <li>
-                    <a href="Route" className='Nav-link'>Menu</a>
+                    <Link to="specials-section" smooth={true} duration={400} spy={true} offset={-100} className='Nav-link' activeClass="Active-link">Menu</Link>
                 </li>
                 <li>
-                    <a href="Route" className='Nav-link'>Reservations</a>
+                    <Link to="booking-section" smooth={true} duration={400} spy={true} offset={-100} className='Nav-link' activeClass="Active-link">Reservations</Link>
                 </li>
                 <li>
                     <a href="Route" className='Nav-link'>Order Online</a>

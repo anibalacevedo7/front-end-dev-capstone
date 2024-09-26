@@ -1,7 +1,6 @@
 function Header(props){
 return(
-    <header className='Header'>
-      Header Placeholder  
+    <header className='Header'>  
     </header>
 )
 }
