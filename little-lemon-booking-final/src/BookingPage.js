@@ -1,10 +1,13 @@
-import chefspicture from './images/icons_assets/Mario and Adrian b.jpg'
+import BookingForm from './BookingForm';
 
 function BookingPage(props){
     return(
-        <d>
-            <img src={chefspicture} alt='Booking Chefs' className='BookingImage'></img>  
-        </d>
+        <div>
+            <div className='Bookingpage'>
+                <h1 className='Bookingheader'>Book a table</h1>
+                <BookingForm data={props.data} />
+            </div>
+        </div>
     )
     }
     

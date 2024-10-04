@@ -87,20 +87,20 @@
   background-color: white;
   place-items: center;
   text-align: center;
-  grid-template-rows: CallToAction Specials;
+  grid-template-rows: auto auto auto;
 }
 
 .Footer{
   background-color: white;
   display: grid;
   place-items: center;
-  grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
+  grid-template-columns: auto repeat(4, 1fr) auto;
   grid-template-rows: auto;
+  max-width: 100%;
 }
 
 .Footer-menu{
   list-style-type: none;
-  max-width: 100%;
   display: grid;
   place-items: center;
   text-align: center;
@@ -135,6 +135,7 @@
   max-width: 25%;
   padding-right: 10%;
   padding-left: 15%;
+  margin-left: 10%;
 }
 
 .Header1 {
@@ -184,7 +185,7 @@
 .Actionimage {
   margin-top: 0%;
   margin-right: 5%;
-  margin-left: 25%;
+  margin-left: 21%;
   height: 400px;
   transform: translateY(-35px); 
   clip-path: inset(15% 5% 10% 0% round 3%);
@@ -203,6 +204,7 @@
   height: 100px;
   text-align: left;
   margin-bottom: 10px;
+  margin-left: 12%;
 }
 
 .Specialsheader {
@@ -238,8 +240,7 @@
   height: auto;
   overflow: hidden;
   margin-right: 11%;
-  margin-left: 11%;
-  
+  margin-left: 18%;
 }
 
 .Dishcard {
@@ -258,8 +259,8 @@
 .Dishimage {
   grid-column: span 2;
   margin-bottom: 1px;
-  height: 120%;
-  clip-path: inset(0% 0% 50px 0% round 0%);
+  height: 200%;
+  clip-path: inset(0% 0% 50% 0% round 0%);
 }
 
 .Dishname {
@@ -297,11 +298,12 @@
   color: #495E57;
   margin: 0% 10% 0% 10%;
   border: none;
+  background-color: none;
 }
 
 .Deliveryicon {
-  margin: 7% 0% 0% 5%;
-  height: 40%;
+  margin: 15px 0 0 10px;
+  height: 20px;
   
 }
 .section {
@@ -312,10 +314,105 @@
   font-weight: 900;
 }
 
-.BookingImage {
-  max-width: 100%;
+.Bookingpage {
+  display: grid;
+  grid-template-rows: auto;
+  text-align: left;
+  min-width: 100%;
+  height: 1000px;
+  padding-top: 75px;
+  background-image: url('./images/icons_assets/restaurant\ chef\ B.jpg');
 }
 
+.Bookingheader {
+  margin-top: 0%;
+  font-family: "Markazi Text", serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: white;
+  margin-bottom: 0%;
+  height: 15%;
+  padding-right: 30%;
+  padding-left: 15%;
+}
+
+
+.Formfields {
+  margin-left: 15%;
+  text-align: left;
+  max-width: 100%;
+  display: grid;
+  width: 1000px;
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  font-weight: 750;
+  color: white;
+
+}
+
+.Formlabel {
+  font-family: "Markazi Text", serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: white;
+}
+
+.Forminput {
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: #495E57;
+  border: none;
+  border-radius: 10px;
+  background-color: #EDEFEE;
+  padding: 2% 1% 2% 3%;
+}
+
+.Formbutton {
+  cursor: pointer;
+  border: none;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #F4CE14;
+  font-family: "Karla", sans-serif;
+  font-size: 17px;
+  font-weight: 750;
+  color: #333333;
+  padding: 3px 10px;
+  margin: 3% 0 0 0;
+}
+
+.Formbutton:disabled {
+  cursor: default;
+  background-color: #495E57;
+  color: grey;
+}
+
+.ConfirmHeader {
+  margin-top: 0%;
+  font-family: "Markazi Text", serif;
+  font-weight: 600;
+  font-size: 100px;
+  color: white;
+  margin-bottom: 0%;
+  height: 15%;
+  text-align: center;
+}
+
+.SubConfirmHeader {
+  margin-top: 0%;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #495E57;
+  margin-bottom: 0%;
+  height: 30%;
+  text-align: center;
+  margin: 0 20% 0 20%;
+  padding: 2% 10% 2% 10%;
+  background-color: #EDEFEE;
+}
 /*For smaller screens*/
 @media (max-width: 800px) {
   .Nav{
