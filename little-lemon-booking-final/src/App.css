@@ -413,6 +413,15 @@
   padding: 2% 10% 2% 10%;
   background-color: #EDEFEE;
 }
+
+.Guestsnumber {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0 0 0 0;
+  color: white;
+  text-align: left;
+}
 /*For smaller screens*/
 @media (max-width: 800px) {
   .Nav{

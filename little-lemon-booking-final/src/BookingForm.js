@@ -7,13 +7,15 @@ const submitAPI = function(formData) {
 
 function BookingForm (props){
 
+    const [ customerName, setCustomerName ] = useState('');
     const [ date, setDate] = useState('');
     const [ time, setTime] = useState('');
-    const [ guests, setGuests] = useState('');
+    const [ guests, setGuests] = useState('1');
     const [ ocassion, setOcassion] = useState('');
     const [ disableSubmit, setDisableSubmit] = useState(true);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const BookingData = [date,time,guests,ocassion];
+    const BookingData = [customerName,date,time,guests,ocassion];
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,7 +29,7 @@ function BookingForm (props){
     }
 
     const handleMouseOver = () => {
-        if (date!=='' && time!=='' && guests!==''){
+        if (date!=='' && time!=='' && guests!==''&&(customerName.length > 5)){
         setDisableSubmit(false);
         return;
         }
@@ -40,6 +42,8 @@ function BookingForm (props){
         <div>
             {!isSubmitted?(
                 <form onSubmit={handleSubmit} className='Formfields'>
+                    <label htmlFor='res-name' className='Formlabel'>Name </label>
+                    <input id='res-name' type='text' className='Forminput' value={customerName} onChange={e => setCustomerName(e.target.value)} placeholder='Enter full name for the reservation'></input>
                     <label htmlFor='res-date' className='Formlabel'>Date </label>
                     <input 
                         id='res-date' 
@@ -60,7 +64,8 @@ function BookingForm (props){
                         ))}
                     </select>
                     <label htmlFor='res-guests' className='Formlabel'> Number of guests </label>
-                    <input id='res-guests' className='Forminput' type="number" value={guests} placeholder='1-12' onChange = {e => setGuests(e.target.value)}></input>
+                    <p className='Guestsnumber'>{guests}</p>
+                    <input id='res-guests' className='Forminput' type="range" min="1" max="12" value={guests} placeholder='1-12' onChange = {e => setGuests(e.target.value)}></input>
                     <label htmlFor='res-ocassion' className='Formlabel'> Ocassion </label>
                     <select id='res-ocassion' className='Forminput' value={ocassion} onChange ={e => setOcassion(e.target.value)}>
                         <option value="">Please select ocassion</option>
